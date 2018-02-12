@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00169A7C202AC4A000EAD51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169A7B202AC4A000EAD51A /* AppDelegate.swift */; };
+		00169A80202AC4A000EAD51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00169A7F202AC4A000EAD51A /* Assets.xcassets */; };
+		00169A83202AC4A000EAD51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00169A81202AC4A000EAD51A /* Main.storyboard */; };
+		00169AB82031803A00EAD51A /* YouTMusicCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00169AB92031803A00EAD51A /* YouTMusicCore.framework */; };
+		00169AC42031833600EAD51A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169AC22031833600EAD51A /* LoginViewController.swift */; };
+		00169AC52031833600EAD51A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00169AC32031833600EAD51A /* LoginViewController.xib */; };
+		00169AD220318DAA00EAD51A /* YouTMusicPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169AD120318DAA00EAD51A /* YouTMusicPopover.swift */; };
+		EC122011DE5714967B0CD075 /* Pods_YouTMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E929239DA63A97C841CE8DC5 /* Pods_YouTMusic.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00169A78202AC4A000EAD51A /* YouTMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00169A7B202AC4A000EAD51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00169A7F202AC4A000EAD51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00169A82202AC4A000EAD51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00169A84202AC4A000EAD51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00169A85202AC4A000EAD51A /* YouTMusic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouTMusic.entitlements; sourceTree = "<group>"; };
+		00169AB92031803A00EAD51A /* YouTMusicCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YouTMusicCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00169AC22031833600EAD51A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		00169AC32031833600EAD51A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		00169AD120318DAA00EAD51A /* YouTMusicPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicPopover.swift; sourceTree = "<group>"; };
+		1B97230F359684CA2205C09E /* Pods-YouTMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		E6234972DE8F5FD503721975 /* Pods-YouTMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic.release.xcconfig"; sourceTree = "<group>"; };
+		E929239DA63A97C841CE8DC5 /* Pods_YouTMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00169A75202AC4A000EAD51A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00169AB82031803A00EAD51A /* YouTMusicCore.framework in Frameworks */,
+				EC122011DE5714967B0CD075 /* Pods_YouTMusic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00169A6F202AC4A000EAD51A = {
+			isa = PBXGroup;
+			children = (
+				00169A7A202AC4A000EAD51A /* YouTMusic */,
+				00169A79202AC4A000EAD51A /* Products */,
+				450F521C690D7E3A08CCD890 /* Pods */,
+				37B99F16645E913E299F5950 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		00169A79202AC4A000EAD51A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00169A78202AC4A000EAD51A /* YouTMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00169A7A202AC4A000EAD51A /* YouTMusic */ = {
+			isa = PBXGroup;
+			children = (
+				00169ABF203180DB00EAD51A /* Constants */,
+				00169ABD2031807900EAD51A /* Resources */,
+				00169ACF20318D8900EAD51A /* View */,
+				00169ABC2031806D00EAD51A /* Controller */,
+				00169A7B202AC4A000EAD51A /* AppDelegate.swift */,
+			);
+			path = YouTMusic;
+			sourceTree = "<group>";
+		};
+		00169ABA2031804C00EAD51A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				00169A7F202AC4A000EAD51A /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		00169ABC2031806D00EAD51A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				00169AC22031833600EAD51A /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		00169ABD2031807900EAD51A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00169ABE2031808500EAD51A /* Storyboards + Xibs */,
+				00169ABA2031804C00EAD51A /* Assets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		00169ABE2031808500EAD51A /* Storyboards + Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				00169AC32031833600EAD51A /* LoginViewController.xib */,
+				00169A81202AC4A000EAD51A /* Main.storyboard */,
+			);
+			name = "Storyboards + Xibs";
+			sourceTree = "<group>";
+		};
+		00169ABF203180DB00EAD51A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				00169A84202AC4A000EAD51A /* Info.plist */,
+				00169A85202AC4A000EAD51A /* YouTMusic.entitlements */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		00169ACF20318D8900EAD51A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00169AD020318D9100EAD51A /* YouTMusic */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		00169AD020318D9100EAD51A /* YouTMusic */ = {
+			isa = PBXGroup;
+			children = (
+				00169AD120318DAA00EAD51A /* YouTMusicPopover.swift */,
+			);
+			name = YouTMusic;
+			sourceTree = "<group>";
+		};
+		37B99F16645E913E299F5950 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00169AB92031803A00EAD51A /* YouTMusicCore.framework */,
+				E929239DA63A97C841CE8DC5 /* Pods_YouTMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		450F521C690D7E3A08CCD890 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B97230F359684CA2205C09E /* Pods-YouTMusic.debug.xcconfig */,
+				E6234972DE8F5FD503721975 /* Pods-YouTMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00169A77202AC4A000EAD51A /* YouTMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00169A88202AC4A000EAD51A /* Build configuration list for PBXNativeTarget "YouTMusic" */;
+			buildPhases = (
+				6365B67E7312D0CB2022F1B0 /* [CP] Check Pods Manifest.lock */,
+				00169A74202AC4A000EAD51A /* Sources */,
+				00169A75202AC4A000EAD51A /* Frameworks */,
+				00169A76202AC4A000EAD51A /* Resources */,
+				CB6CEC15F7B5652C617AC396 /* [CP] Embed Pods Frameworks */,
+				AA62A63F9B80E1A1FCB3DDCC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouTMusic;
+			productName = YouTMusic;
+			productReference = 00169A78202AC4A000EAD51A /* YouTMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00169A70202AC4A000EAD51A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Huy Nguyen";
+				TargetAttributes = {
+					00169A77202AC4A000EAD51A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 00169A73202AC4A000EAD51A /* Build configuration list for PBXProject "YouTMusic" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00169A6F202AC4A000EAD51A;
+			productRefGroup = 00169A79202AC4A000EAD51A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00169A77202AC4A000EAD51A /* YouTMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00169A76202AC4A000EAD51A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00169A80202AC4A000EAD51A /* Assets.xcassets in Resources */,
+				00169A83202AC4A000EAD51A /* Main.storyboard in Resources */,
+				00169AC52031833600EAD51A /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6365B67E7312D0CB2022F1B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouTMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA62A63F9B80E1A1FCB3DDCC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB6CEC15F7B5652C617AC396 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00169A74202AC4A000EAD51A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00169AC42031833600EAD51A /* LoginViewController.swift in Sources */,
+				00169AD220318DAA00EAD51A /* YouTMusicPopover.swift in Sources */,
+				00169A7C202AC4A000EAD51A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00169A81202AC4A000EAD51A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00169A82202AC4A000EAD51A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00169A86202AC4A000EAD51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00169A87202AC4A000EAD51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		00169A89202AC4A000EAD51A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B97230F359684CA2205C09E /* Pods-YouTMusic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YouTMusic/YouTMusic.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = YouTMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryan.YouTMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		00169A8A202AC4A000EAD51A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6234972DE8F5FD503721975 /* Pods-YouTMusic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YouTMusic/YouTMusic.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L76363ZU66;
+				INFOPLIST_FILE = YouTMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryan.YouTMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00169A73202AC4A000EAD51A /* Build configuration list for PBXProject "YouTMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00169A86202AC4A000EAD51A /* Debug */,
+				00169A87202AC4A000EAD51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00169A88202AC4A000EAD51A /* Build configuration list for PBXNativeTarget "YouTMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00169A89202AC4A000EAD51A /* Debug */,
+				00169A8A202AC4A000EAD51A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00169A70202AC4A000EAD51A /* Project object */;
+}

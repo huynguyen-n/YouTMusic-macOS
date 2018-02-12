@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.6.0)
+  - OAuthSwift (1.2.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SwiftLint (0.24.2)
+  - SwiftyBeaver (1.4.0)
+  - Unbox (2.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - OAuthSwift
+  - RxCocoa
+  - RxSwift
+  - SwiftLint
+  - SwiftyBeaver (= 1.4.0)
+  - Unbox
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  OAuthSwift: 7fd6855b8e4d58eb5a30d156ea9bed7a8aecd1ca
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SwiftLint: 2aa21b96c8d13396a051bc1cb659d2ce1e0075b0
+  SwiftyBeaver: 78d9186ce7595b4400ce01e5fd750d263e72dd7b
+  Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
+
+PODFILE CHECKSUM: bee28ec925a2bfc67502a2891b8df55f491a6ddf
+
+COCOAPODS: 1.4.0
