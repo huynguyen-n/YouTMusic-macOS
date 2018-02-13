@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0000309620328DFB00C475AE /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000309520328DFB00C475AE /* AppViewModel.swift */; };
 		00169A69202AC46F00EAD51A /* YouTMusicCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 00169A67202AC46F00EAD51A /* YouTMusicCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00169A8E202BFDAC00EAD51A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169A8D202BFDAC00EAD51A /* Constants.swift */; };
 		00169A91202BFFF000EAD51A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169A90202BFFF000EAD51A /* BaseViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0000309520328DFB00C475AE /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		00169A64202AC46F00EAD51A /* YouTMusicCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouTMusicCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00169A67202AC46F00EAD51A /* YouTMusicCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouTMusicCore.h; sourceTree = "<group>"; };
 		00169A68202AC46F00EAD51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				00169ACB2031854200EAD51A /* BaseViewModel.swift */,
 				00169ACD203185AB00EAD51A /* AuthenticateViewModel.swift */,
 				00169AD320319B1600EAD51A /* ViewModelCoordinator.swift */,
+				0000309520328DFB00C475AE /* AppViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				00169A9B202C347400EAD51A /* Request + Alamofire.swift in Sources */,
 				00169A91202BFFF000EAD51A /* BaseViewController.swift in Sources */,
 				00169AB4202D8FE900EAD51A /* UserObj.swift in Sources */,
+				0000309620328DFB00C475AE /* AppViewModel.swift in Sources */,
 				00169AB7202DA60300EAD51A /* AuthenticateState.swift in Sources */,
 				00169AA1202C483300EAD51A /* Request + Error.swift in Sources */,
 				00169AB2202D5F5900EAD51A /* YouTMusicOAuth.swift in Sources */,

@@ -20,6 +20,4 @@ public final class ViewModelCoordinator: ViewModelCoordinatorProtocol {
     init(authenViewModel: AuthenticateViewModel) {
         self.authenViewModel = authenViewModel
     }
-    
-    
 }

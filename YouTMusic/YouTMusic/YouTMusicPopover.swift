@@ -16,8 +16,11 @@ class YouTMusicPopover: NSPopover {
     fileprivate let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     fileprivate let authenticateModel: AuthenticateViewModelProtocol
     fileprivate let disposeBags = DisposeBag()
+    fileprivate let coordinator: ViewModelCoordinatorProtocol
     
-    override init() {
+    init(coordinator: ViewModelCoordinatorProtocol) {
+        self.coordinator = coordinator
+        viewmodel
         authenticateModel = AuthenticateViewModel()
         super.init()
     }
