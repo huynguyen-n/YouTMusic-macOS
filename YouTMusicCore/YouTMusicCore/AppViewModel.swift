@@ -42,4 +42,16 @@ public final class AppViewModel: AppViewModelProtocol, AppViewModelInput, AppVie
     public var popoverStateVariable = Variable<PopoverState>(.close)
     
     fileprivate let disposeBag = DisposeBag()
+    
+    public init() {
+        
+        switchPopoverPublish.withLatestFrom(popoverStateVariable.asObservable())
+            .map({ return $0 == .open ? .close : .open })
+            .bind(to: popoverStateVariable)
+            .disposed(by: disposeBag)
+        
+        actionPopoverPublish.bind(to: popoverStateVariable).disposed(by: disposeBag)
+        
+//        NSUserNotificationCenter.observ
+    }
 }

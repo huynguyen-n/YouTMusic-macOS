@@ -20,7 +20,7 @@ class YouTMusicPopover: NSPopover {
     
     init(coordinator: ViewModelCoordinatorProtocol) {
         self.coordinator = coordinator
-        viewmodel
+//        viewmodel
         authenticateModel = AuthenticateViewModel()
         super.init()
     }
