@@ -8,15 +8,23 @@
 
 import Foundation
 import Unbox
+import RxSwift
 
 public class UserObj: NSObject, NSCoding {
     
+    //    MARK: - Variable
     public var name: String?
     public var authToken: OAuthToken
+    
+    //    MARK: - Observer
+    public let reloadYouTMusicDataPublisher = PublishSubject<Void>()
+    public let newestSongsMethodObjVar = Variable<Array<SongObj>?>(nil)
+    fileprivate let disposeBag = DisposeBag()
     
     public init(authToken: OAuthToken) {
         self.authToken = authToken
         super.init()
+        binding()
     }
     
     public required init(unboxer: Unboxer) throws {
@@ -35,5 +43,18 @@ public class UserObj: NSObject, NSCoding {
         self.name = aDecoder.decodeObject(forKey: Constants.Obj.User.Name) as? String
         self.authToken = aDecoder.decodeObject(forKey: Constants.Obj.User.Auth) as! OAuthToken
         super.init()
+        binding()
+    }
+    
+    //    MARK: - Binding
+    public func binding() {
+        
+        reloadYouTMusicDataPublisher.asObservable().flatMapLatest { _ -> Observable<Array<SongObj>> in
+            return YouTMusicService().newestSongsMethodObserver()
+            }.catchError { _ -> Observable<Array<SongObj>> in
+                return Observable.empty()
+            }.do(onNext: { (songObjs) in
+                Logger.info("Current newest songs count = \(songObjs.count)")
+            }).bind(to: newestSongsMethodObjVar).disposed(by: disposeBag)
     }
 }

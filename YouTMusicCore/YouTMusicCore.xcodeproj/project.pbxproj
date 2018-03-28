@@ -28,6 +28,9 @@
 		00169ACE203185AB00EAD51A /* AuthenticateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169ACD203185AB00EAD51A /* AuthenticateViewModel.swift */; };
 		00169AD420319B1600EAD51A /* ViewModelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169AD320319B1600EAD51A /* ViewModelCoordinator.swift */; };
 		0038BB14203490EB00F5EBEF /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038BB13203490EB00F5EBEF /* NotificationCenter.swift */; };
+		006EA629206A46C400145C5D /* ThumbnailObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA628206A46C400145C5D /* ThumbnailObj.swift */; };
+		006EA631206B424100145C5D /* NewestSongsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA630206B424100145C5D /* NewestSongsRequest.swift */; };
+		006EA634206B44EE00145C5D /* YouTMusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA633206B44EE00145C5D /* YouTMusicService.swift */; };
 		E437799F5C3E6AA60589DB94 /* Pods_YouTMusicCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D20C98FC7160177B4B398F /* Pods_YouTMusicCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		00169ACD203185AB00EAD51A /* AuthenticateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewModel.swift; sourceTree = "<group>"; };
 		00169AD320319B1600EAD51A /* ViewModelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelCoordinator.swift; sourceTree = "<group>"; };
 		0038BB13203490EB00F5EBEF /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		006EA628206A46C400145C5D /* ThumbnailObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailObj.swift; sourceTree = "<group>"; };
+		006EA630206B424100145C5D /* NewestSongsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestSongsRequest.swift; sourceTree = "<group>"; };
+		006EA633206B44EE00145C5D /* YouTMusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicService.swift; sourceTree = "<group>"; };
 		21EBD325C7D03A3AB1511411 /* Pods-YouTMusicCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusicCore.release.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusicCore/Pods-YouTMusicCore.release.xcconfig"; sourceTree = "<group>"; };
 		D9D20C98FC7160177B4B398F /* Pods_YouTMusicCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTMusicCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13BD30ECDF095B788238864 /* Pods-YouTMusicCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusicCore.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusicCore/Pods-YouTMusicCore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		00169A8C202BFD9A00EAD51A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				006EA632206B44D700145C5D /* Services */,
 				0038BB12203490D500F5EBEF /* Notification */,
 				00169AC62031851B00EAD51A /* ViewModels */,
 				00169AB5202DA5F200EAD51A /* State */,
@@ -165,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				00169AA2202C52BC00EAD51A /* SongDetailRequest.swift */,
+				006EA630206B424100145C5D /* NewestSongsRequest.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			children = (
 				00169AB3202D8FE900EAD51A /* UserObj.swift */,
 				00169AA6202C53B000EAD51A /* SongObj.swift */,
+				006EA628206A46C400145C5D /* ThumbnailObj.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -213,6 +222,14 @@
 				0038BB13203490EB00F5EBEF /* NotificationCenter.swift */,
 			);
 			name = Notification;
+			sourceTree = "<group>";
+		};
+		006EA632206B44D700145C5D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				006EA633206B44EE00145C5D /* YouTMusicService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		750B5BB661F4279B16BB7308 /* Pods */ = {
@@ -358,6 +375,8 @@
 				00169A99202C333900EAD51A /* Request.swift in Sources */,
 				00169ACC2031854200EAD51A /* BaseViewModel.swift in Sources */,
 				0038BB14203490EB00F5EBEF /* NotificationCenter.swift in Sources */,
+				006EA631206B424100145C5D /* NewestSongsRequest.swift in Sources */,
+				006EA634206B44EE00145C5D /* YouTMusicService.swift in Sources */,
 				00169AB0202D5F4600EAD51A /* OAuthToken.swift in Sources */,
 				00169A9B202C347400EAD51A /* Request + Alamofire.swift in Sources */,
 				00169A91202BFFF000EAD51A /* BaseViewController.swift in Sources */,
@@ -369,6 +388,7 @@
 				00169A94202C005000EAD51A /* Log.swift in Sources */,
 				00169AA3202C52BC00EAD51A /* SongDetailRequest.swift in Sources */,
 				00169AAE202D5F3C00EAD51A /* OAuthWebviewHandler.swift in Sources */,
+				006EA629206A46C400145C5D /* ThumbnailObj.swift in Sources */,
 				00169ACE203185AB00EAD51A /* AuthenticateViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NewestSongCell" customModule="YouTMusic" customModuleProvider="target">
+            <connections>
+                <outlet property="singerLbl" destination="i0J-oy-kRt" id="egc-hf-VIG"/>
+                <outlet property="thumbnailImg" destination="WUM-nY-8ol" id="QMc-Z7-dcN"/>
+                <outlet property="titleLbl" destination="eeF-Nr-j1g" id="0Ao-ov-SUq"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eeF-Nr-j1g">
+                    <rect key="frame" x="218" y="59" width="248" height="26"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Vỡ Tan Mất Rồi" id="QTQ-fH-87E">
+                        <font key="font" size="17" name="HelveticaNeue-Medium"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i0J-oy-kRt">
+                    <rect key="frame" x="218" y="31" width="248" height="19"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hà Anh Tuấn" id="eaN-Qz-d6n">
+                        <font key="font" metaFont="systemLight" size="15"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUM-nY-8ol">
+                    <rect key="frame" x="20" y="20" width="170" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="Huq-iM-Bwj"/>
+                        <constraint firstAttribute="width" constant="170" id="q3F-qj-vbL"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="axesIndependently" image="maxresdefault" id="MFr-Gf-xI4"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="i0J-oy-kRt" secondAttribute="trailing" constant="16" id="7it-hY-esr"/>
+                <constraint firstItem="WUM-nY-8ol" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="7li-st-RtT"/>
+                <constraint firstItem="i0J-oy-kRt" firstAttribute="leading" secondItem="WUM-nY-8ol" secondAttribute="trailing" constant="30" id="GtD-WA-CZK"/>
+                <constraint firstItem="eeF-Nr-j1g" firstAttribute="top" secondItem="WUM-nY-8ol" secondAttribute="top" multiplier="4:2" id="R66-yn-Qhm"/>
+                <constraint firstItem="i0J-oy-kRt" firstAttribute="bottom" secondItem="WUM-nY-8ol" secondAttribute="bottom" multiplier="0.9" id="i70-l6-5og"/>
+                <constraint firstItem="eeF-Nr-j1g" firstAttribute="leading" secondItem="WUM-nY-8ol" secondAttribute="trailing" constant="30" id="teE-dQ-8fR"/>
+                <constraint firstItem="WUM-nY-8ol" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="xNi-wC-apB"/>
+                <constraint firstAttribute="trailing" secondItem="eeF-Nr-j1g" secondAttribute="trailing" constant="16" id="xR1-VE-YJR"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="-236.5"/>
+        </customView>
+        <collectionViewItem id="Stc-xq-0Bj" customClass="NewestSongCell" customModule="YouTMusic" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="maxresdefault" width="1280" height="720"/>
+    </resources>
+</document>

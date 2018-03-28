@@ -14,6 +14,7 @@ public enum NotificationType: String {
     
     case windowWillClose
     case showPopover
+    case handleSurgeCallback
     
     func toString() -> String {
         if self.rawValue == NotificationType.windowWillClose.rawValue {
