@@ -31,15 +31,15 @@ public class OAuthToken: NSObject, NSCoding {
     
     
     public func setAuthenticationHeader(request: inout URLRequest) {
-        let tokenStr = "Bearer" + self.token
+        let tokenStr = "Bearer " + self.token
         request.setValue(tokenStr, forHTTPHeaderField: "Authorization")
     }
     
     
     public func encode(with aCoder: NSCoder) {
-        _ = aCoder.decodeObject(forKey: Constants.Obj.Auth.OauthToken) as! String
-        _ = aCoder.decodeObject(forKey: Constants.Obj.Auth.OauthRefreshToken) as! String
-        _ = aCoder.decodeObject(forKey: Constants.Obj.Auth.OauthTokenExpiresAt) as? Date
+        aCoder.encode(self.token, forKey: Constants.Obj.Auth.OauthToken)
+        aCoder.encode(self.refreshToken, forKey: Constants.Obj.Auth.OauthRefreshToken)
+        aCoder.encode(self.tokenExpires, forKey: Constants.Obj.Auth.OauthTokenExpiresAt)
     }
     
     public required init?(coder aDecoder: NSCoder) {

@@ -55,6 +55,7 @@ public final class YouTMusicOAuth {
             if let urlString = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue,
                 let url = URL(string: urlString) {
                 YouTMusicOAuth.applicationHandle(url: url)
+                YouTMusicOAuth.shareInstance.currentUserObj?.reloadYouTMusicDataPublisher.onCompleted()
             }
         }).disposed(by: disposeBag)
     }
@@ -147,7 +148,7 @@ extension YouTMusicOAuth {
         
         lock.lock()
         defer {
-            self.lock.lock()
+            self.lock.unlock()
         }
         
         let token = OAuthToken(credential: credential)

@@ -24,6 +24,7 @@ final class NewestSongsRequest: Request {
         guard let result = data as? [String: Any] else {
             return nil
         }
+        
         return try unbox(dictionary: result, atKey: "items")
     }
 }

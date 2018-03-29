@@ -24,6 +24,6 @@ class NewestSongCell: NSCollectionViewItem {
     public func configure(with songObj: SongObj) {
         titleLbl.stringValue = songObj.title
         singerLbl.stringValue = songObj.singer
-        thumbnailImg.image = NSImage(byReferencing: URL(string: songObj.thumbnail._default.url)!)
+//        thumbnailImg.image = NSImage(byReferencing: URL(string: songObj.thumbnail._default.url)!)
     }
 }

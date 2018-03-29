@@ -20,7 +20,7 @@ extension Request {
     
     var defaultHeader: HeaderParameter? { return ["Accept": "application/json", "Accept-Language": "en_US"] }
     
-    var isAuthenticate: Bool { return false }
+    var isAuthenticate: Bool { return true }
     
     var urlPath: String { return basePath + endPoint }
     
@@ -43,10 +43,15 @@ extension Request {
             
             Alamofire
                 .request(urlRequest)
-                .validate(contentType: ["application/json", "text/html" ])
+//                .validate(contentType: ["application/json", "text/html"])
                 .responseJSON(completionHandler: { (response) in
                     
-                    if let error = self.validationResponse(response) {
+                    if let error = self.handleValidation(response) {
+                        
+                        if error.code == 401 {
+                            YouTMusicOAuth.shareInstance.logout()
+                        }
+                        
                         Logger.error("[ERROR API] = \(self.endPoint) = \(error)")
                         observer.onError(error)
                         return

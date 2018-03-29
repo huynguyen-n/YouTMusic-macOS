@@ -35,8 +35,8 @@ public class UserObj: NSObject, NSCoding {
     }
     
     public func encode(with aCoder: NSCoder) {
-        _ = aCoder.decodeObject(forKey: Constants.Obj.User.Name)
-        _ = aCoder.decodeObject(forKey: Constants.Obj.User.Auth)
+        aCoder.encode(name, forKey: Constants.Obj.User.Name)
+        aCoder.encode(authToken, forKey: Constants.Obj.User.Auth)
     }
     
     @objc required public init?(coder aDecoder: NSCoder) {
@@ -49,12 +49,18 @@ public class UserObj: NSObject, NSCoding {
     //    MARK: - Binding
     public func binding() {
         
-        reloadYouTMusicDataPublisher.asObservable().flatMapLatest { _ -> Observable<Array<SongObj>> in
-            return YouTMusicService().newestSongsMethodObserver()
-            }.catchError { _ -> Observable<Array<SongObj>> in
+        reloadYouTMusicDataPublisher
+            .asObservable()
+            .flatMapLatest { _ -> Observable<Array<SongObj>> in
+                return YouTMusicService().newestSongsMethodObserver()
+            }
+            .catchError { _ -> Observable<Array<SongObj>> in
                 return Observable.empty()
-            }.do(onNext: { (songObjs) in
+            }
+            .do(onNext: { (songObjs) in
                 Logger.info("Current newest songs count = \(songObjs.count)")
-            }).bind(to: newestSongsMethodObjVar).disposed(by: disposeBag)
+            })
+            .bind(to: newestSongsMethodObjVar)
+            .disposed(by: disposeBag)
     }
 }

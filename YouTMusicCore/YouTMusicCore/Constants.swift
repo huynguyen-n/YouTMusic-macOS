@@ -28,7 +28,7 @@ struct Constants {
         
         static let SongDetail = "/:id"
         
-        static let NewestSongs = "/search?part=snippet&order=date&type=video&videoCategoryId=10"
+        static let NewestSongs = "/search?part=snippet&order=date&type=video&videoCategoryId=10&fields=items%2Fsnippet"
     }
     
     struct Obj {

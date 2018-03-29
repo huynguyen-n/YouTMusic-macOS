@@ -12,7 +12,7 @@ import RxSwift
 
 extension Request {
     
-    func validationResponse(_ response: DataResponse<Any>?) -> NSError? {
+    func handleValidation(_ response: DataResponse<Any>?) -> NSError? {
         
         guard let innerResponse = response?.response else {
             return NSError.jsonMapper()
@@ -24,6 +24,6 @@ extension Request {
             return  nil
         }
         
-        return NSError.youtubeError(data: innerResponse, code: statusCode)
+        return NSError.youtubeError(data: innerResponse.allHeaderFields, code: statusCode)
     }
 }

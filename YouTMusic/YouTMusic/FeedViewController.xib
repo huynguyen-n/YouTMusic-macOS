@@ -7,7 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="FeedViewController" customModule="YouTMusic" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="j1S-VG-o34" id="vbg-Mq-jL0"/>
+                <outlet property="collectionView" destination="eOB-ep-rXI" id="wWb-7H-ZSd"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -17,13 +17,13 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="770"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1S-VG-o34">
+                <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1S-VG-o34" userLabel="ScrollView - YouTMusic Collection View">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="770"/>
                     <clipView key="contentView" drawsBackground="NO" id="NTk-Aq-IpI">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="770"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView id="eOB-ep-rXI">
+                            <collectionView id="eOB-ep-rXI" customClass="YouTMusicCollectionView" customModule="YouTMusic" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="158"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Nhn-aa-uGU">
@@ -32,10 +32,9 @@
                                 <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="gir-94-Cln">
-                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="pah-pk-dlS">

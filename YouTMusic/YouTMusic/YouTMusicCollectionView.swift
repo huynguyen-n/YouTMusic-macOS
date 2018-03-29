@@ -10,12 +10,7 @@ import Cocoa
 
 class YouTMusicCollectionView: NSCollectionView {
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
+    override open var isFlipped: Bool {
+        return true
     }
-    
-    
-    
 }

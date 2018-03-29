@@ -26,8 +26,6 @@ class FeedViewController: BaseViewController {
         
         initCollectionView()
         
-    //    Update
-        
         guard let currentUser = YouTMusicOAuth.shareInstance.currentUserObj else { return }
         guard let newestSongObjs = currentUser.newestSongsMethodObjVar.value else { return }
         
@@ -43,8 +41,10 @@ class FeedViewController: BaseViewController {
         NotificationCenter.removeAllObserver(self)
     }
     
-    fileprivate func binding() {
+    public func buildController(coordinator: ViewModelCoordinator) -> FeedViewController {
+        let controller = FeedViewController(nibName: NSNib.Name("FeedViewController"), bundle: nil)
         
+        return controller
     }
 }
 
@@ -61,10 +61,15 @@ extension FeedViewController {
         
         let nib = NSNib(nibNamed: NSNib.Name(rawValue: CellIdentifier), bundle: nil)
         collectionView.register(nib, forItemWithIdentifier: NSUserInterfaceItemIdentifier.init(CellIdentifier))
+        
+        let flow = NSCollectionViewFlowLayout()
+        flow.itemSize = CGSize(width: collectionView.bounds.width, height: 50)
+        collectionView.collectionViewLayout = flow
     }
 }
 
 extension FeedViewController: NSCollectionViewDataSource {
+    
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
         return 1
     }
@@ -80,6 +85,7 @@ extension FeedViewController: NSCollectionViewDataSource {
         cell.configure(with: newestSongObjs[indexPath.item])
         return cell
     }
+    
 }
 
 extension FeedViewController: NSCollectionViewDelegate {

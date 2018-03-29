@@ -23,7 +23,7 @@ extension NSError {
     }
     
     class func youtubeError(data: Any?, code: Int) -> NSError {
-        guard let dictData = data as? JSONDictionary else {
+        guard let dictData = data as? [String: Any] else {
             return self.jsonMapper()
         }
         
