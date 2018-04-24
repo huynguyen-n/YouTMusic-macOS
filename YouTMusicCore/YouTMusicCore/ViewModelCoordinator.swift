@@ -12,24 +12,35 @@ public protocol ViewModelCoordinatorProtocol {
     
     var appViewModel: AppViewModelProtocol { get }
     var authenViewModel: AuthenticateViewModelProtocol { get }
+    var youtmServiceViewModel: YouTMusicServiceViewModelProtocol { get }
 }
 
 public final class ViewModelCoordinator: ViewModelCoordinatorProtocol {
     
     public let authenViewModel: AuthenticateViewModelProtocol
     public let appViewModel: AppViewModelProtocol
+    public let youtmServiceViewModel: YouTMusicServiceViewModelProtocol
     
     init(
         appViewModel: AppViewModel,
-        authenViewModel: AuthenticateViewModel) {
+        authenViewModel: AuthenticateViewModel,
+        youtmServiceViewModel: YouTMusicServiceViewModel) {
         
         self.appViewModel = appViewModel
         self.authenViewModel = authenViewModel
+        self.youtmServiceViewModel = youtmServiceViewModel
     }
     
     public class func defaultYouTMusic() -> ViewModelCoordinator {
+        
+        // Service
+        let youtmService = YouTMusicService()
+        
+        // View Model
         let appViewModel = AppViewModel()
         let authenViewModel = AuthenticateViewModel()
-        return ViewModelCoordinator(appViewModel: appViewModel, authenViewModel: authenViewModel)
+        let youtmServiceViewModel = YouTMusicServiceViewModel(youtmService: youtmService)
+        
+        return ViewModelCoordinator(appViewModel: appViewModel, authenViewModel: authenViewModel, youtmServiceViewModel: youtmServiceViewModel)
     }
 }

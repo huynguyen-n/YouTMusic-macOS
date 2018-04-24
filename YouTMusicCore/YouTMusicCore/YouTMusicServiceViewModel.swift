@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import RxCocoa
+import RxSwift
 
-public protocol YouTMusicServiceViewModel {
+public protocol YouTMusicServiceViewModelProtocol {
     
     var input: YouTMusicServiceViewModelInput { get }
     var output: YouTMusicServiceViewModelOutput { get }
@@ -23,6 +25,31 @@ public protocol YouTMusicServiceViewModelOutput {
 }
 
 
-public final class YouTMusicServiceViewModel: YouTMusicServiceViewModel, YouTMusicServiceViewModelInput, YouTMusicServiceViewModelOutput {
+public final class YouTMusicServiceViewModel: YouTMusicServiceViewModelProtocol,
+                                                YouTMusicServiceViewModelInput,
+YouTMusicServiceViewModelOutput {
     
+    //    MARK: - Input
+    // TODO
+    
+    //    MARK: - Output
+    // TODO
+    
+    //    MARK: - View Model
+    public var input: YouTMusicServiceViewModelInput { return self }
+    public var output: YouTMusicServiceViewModelOutput { return self }
+    
+    //    MARK: - Variable
+    fileprivate var youtmService: YouTMusicService
+    
+    //    Dispose
+    fileprivate let disposeBag = DisposeBag()
+    
+    //    MARK: - Init
+    init(youtmService: YouTMusicService) {
+        
+        self.youtmService = youtmService
+        
+        YouTMusicOAuth.shareInstance.currentUserObj?.reloadYouTMusicDataPublisher.onNext(())
+    }
 }

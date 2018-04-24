@@ -43,13 +43,13 @@ extension Request {
             
             Alamofire
                 .request(urlRequest)
-//                .validate(contentType: ["application/json", "text/html"])
+                .validate(contentType: ["application/json", "text/html"])
                 .responseJSON(completionHandler: { (response) in
                     
                     if let error = self.handleValidation(response) {
                         
                         if error.code == 401 {
-                            YouTMusicOAuth.shareInstance.logout()
+                            YouTMusicOAuth.shareInstance.renewAccessToken()
                         }
                         
                         Logger.error("[ERROR API] = \(self.endPoint) = \(error)")

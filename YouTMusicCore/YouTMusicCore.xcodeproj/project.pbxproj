@@ -32,6 +32,8 @@
 		006EA631206B424100145C5D /* NewestSongsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA630206B424100145C5D /* NewestSongsRequest.swift */; };
 		006EA634206B44EE00145C5D /* YouTMusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA633206B44EE00145C5D /* YouTMusicService.swift */; };
 		006EA636206C8D1E00145C5D /* YouTMusicServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA635206C8D1E00145C5D /* YouTMusicServiceViewModel.swift */; };
+		007C0D392071E3110034A557 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C0D382071E3110034A557 /* APIResult.swift */; };
+		007C0D3C2071ED920034A557 /* Rx+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007C0D3B2071ED920034A557 /* Rx+Optional.swift */; };
 		E437799F5C3E6AA60589DB94 /* Pods_YouTMusicCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D20C98FC7160177B4B398F /* Pods_YouTMusicCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		006EA630206B424100145C5D /* NewestSongsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestSongsRequest.swift; sourceTree = "<group>"; };
 		006EA633206B44EE00145C5D /* YouTMusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicService.swift; sourceTree = "<group>"; };
 		006EA635206C8D1E00145C5D /* YouTMusicServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicServiceViewModel.swift; sourceTree = "<group>"; };
+		007C0D382071E3110034A557 /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		007C0D3B2071ED920034A557 /* Rx+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Optional.swift"; sourceTree = "<group>"; };
 		21EBD325C7D03A3AB1511411 /* Pods-YouTMusicCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusicCore.release.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusicCore/Pods-YouTMusicCore.release.xcconfig"; sourceTree = "<group>"; };
 		D9D20C98FC7160177B4B398F /* Pods_YouTMusicCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTMusicCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13BD30ECDF095B788238864 /* Pods-YouTMusicCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusicCore.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusicCore/Pods-YouTMusicCore.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		00169A8C202BFD9A00EAD51A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				007C0D3A2071ED7F0034A557 /* Rx Extension */,
 				006EA632206B44D700145C5D /* Services */,
 				0038BB12203490D500F5EBEF /* Notification */,
 				00169AC62031851B00EAD51A /* ViewModels */,
@@ -166,6 +171,7 @@
 				00169A9A202C347400EAD51A /* Request + Alamofire.swift */,
 				00169A9C202C34FA00EAD51A /* Request + Default.swift */,
 				00169AA0202C483300EAD51A /* Request + Error.swift */,
+				007C0D382071E3110034A557 /* APIResult.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -233,6 +239,14 @@
 				006EA633206B44EE00145C5D /* YouTMusicService.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		007C0D3A2071ED7F0034A557 /* Rx Extension */ = {
+			isa = PBXGroup;
+			children = (
+				007C0D3B2071ED920034A557 /* Rx+Optional.swift */,
+			);
+			name = "Rx Extension";
 			sourceTree = "<group>";
 		};
 		750B5BB661F4279B16BB7308 /* Pods */ = {
@@ -376,6 +390,7 @@
 				00169AA7202C53B000EAD51A /* SongObj.swift in Sources */,
 				00169A9F202C462F00EAD51A /* NSError.swift in Sources */,
 				00169A99202C333900EAD51A /* Request.swift in Sources */,
+				007C0D392071E3110034A557 /* APIResult.swift in Sources */,
 				00169ACC2031854200EAD51A /* BaseViewModel.swift in Sources */,
 				0038BB14203490EB00F5EBEF /* NotificationCenter.swift in Sources */,
 				006EA631206B424100145C5D /* NewestSongsRequest.swift in Sources */,
@@ -388,6 +403,7 @@
 				0000309620328DFB00C475AE /* AppViewModel.swift in Sources */,
 				00169AB7202DA60300EAD51A /* AuthenticateState.swift in Sources */,
 				00169AA1202C483300EAD51A /* Request + Error.swift in Sources */,
+				007C0D3C2071ED920034A557 /* Rx+Optional.swift in Sources */,
 				00169AB2202D5F5900EAD51A /* YouTMusicOAuth.swift in Sources */,
 				00169A94202C005000EAD51A /* Log.swift in Sources */,
 				00169AA3202C52BC00EAD51A /* SongDetailRequest.swift in Sources */,

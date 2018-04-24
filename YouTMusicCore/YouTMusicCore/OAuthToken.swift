@@ -13,7 +13,7 @@ public class OAuthToken: NSObject, NSCoding {
     
     
     public var token: String
-    public var refreshToken: String
+    public private(set) var refreshToken: String
     public var tokenExpires: Date?
     
     

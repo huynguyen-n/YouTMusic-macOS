@@ -65,7 +65,7 @@ class YouTMusicPopover: NSPopover {
         
         switch state {
         case .authenticated:
-            contentViewController = FeedViewController()
+            contentViewController = FeedViewController.buildController(coordinator)
         case .unAuthenticated:
             contentViewController = LoginViewController.buildController(coordinator)
         }
@@ -77,7 +77,7 @@ extension YouTMusicPopover: NSPopoverDelegate {
 }
 
 extension YouTMusicPopover {
-    
+
     fileprivate func initCommon() {
         if let button = statusItem.button {
             button.image = NSImage(imageLiteralResourceName: "YouTStatusBarImage")

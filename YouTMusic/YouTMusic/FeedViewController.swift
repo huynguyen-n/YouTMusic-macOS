@@ -18,7 +18,7 @@ class FeedViewController: BaseViewController {
     
     //    MARK: - Variable
     fileprivate var newestSongObjs: [SongObj]!
-    
+    fileprivate var youtmViewModel: YouTMusicServiceViewModelProtocol!
 
     //    MARK: - View Cycle
     override func viewDidLoad() {
@@ -41,9 +41,9 @@ class FeedViewController: BaseViewController {
         NotificationCenter.removeAllObserver(self)
     }
     
-    public func buildController(coordinator: ViewModelCoordinator) -> FeedViewController {
+    public class func buildController(_ coordinator: ViewModelCoordinatorProtocol) -> FeedViewController {
         let controller = FeedViewController(nibName: NSNib.Name("FeedViewController"), bundle: nil)
-        
+        controller.youtmViewModel = coordinator.youtmServiceViewModel
         return controller
     }
 }
@@ -63,7 +63,7 @@ extension FeedViewController {
         collectionView.register(nib, forItemWithIdentifier: NSUserInterfaceItemIdentifier.init(CellIdentifier))
         
         let flow = NSCollectionViewFlowLayout()
-        flow.itemSize = CGSize(width: collectionView.bounds.width, height: 50)
+        flow.itemSize = CGSize(width: collectionView.bounds.width, height: 125)
         collectionView.collectionViewLayout = flow
     }
 }

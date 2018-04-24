@@ -17,7 +17,7 @@ public final class YouTMusicService  {
         
     }
     
-    public func newestSongsMethodObserver() -> Observable<Array<SongObj>> {
+    public func newestSongsMethodObserver() -> Observable<[SongObj]> {
         return NewestSongsRequest().toObservable()
     }
 }

@@ -55,7 +55,6 @@ public final class YouTMusicOAuth {
             if let urlString = event.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue,
                 let url = URL(string: urlString) {
                 YouTMusicOAuth.applicationHandle(url: url)
-                YouTMusicOAuth.shareInstance.currentUserObj?.reloadYouTMusicDataPublisher.onCompleted()
             }
         }).disposed(by: disposeBag)
     }
@@ -70,6 +69,20 @@ public final class YouTMusicOAuth {
         }
         
         currentUserVariable.value = nil
+    }
+    
+    public func renewAccessToken() {
+        lock.lock()
+        defer {
+            self.lock.unlock()
+        }
+        
+        loginPublisher.asObserver().flatMapLatest { [unowned self] _ -> Observable<OAuthSwiftCredential?> in
+            return self.renewAccessToken()
+            }.subscribe (onNext: { [unowned self] credential in
+                guard let credential = credential else { return }
+                self.convertToCurrentUser(credential)
+        }).disposed(by: disposeBag)
     }
     
     fileprivate class func applicationHandle(url: URL) {
@@ -103,6 +116,23 @@ extension YouTMusicOAuth {
                     Logger.error(error)
                     observer.onNext(nil)
                     observer.onCompleted()
+            })
+            
+            return Disposables.create()
+        }
+    }
+    
+    fileprivate func renewAccessToken() -> Observable<OAuthSwiftCredential?> {
+        return Observable<OAuthSwiftCredential?>.create { [unowned self] (observer) -> Disposable in
+            guard let refreshToken = self.currentUserObj?.authToken.refreshToken else { return Disposables.create() }
+            _ = self._youtMusic.renewAccessToken(withRefreshToken: refreshToken, success: { credential, _, _ in
+                Logger.debug(credential)
+                observer.onNext(credential)
+                observer.onCompleted()
+            }, failure: { error in
+                Logger.error(error)
+                observer.onNext(nil)
+                observer.onCompleted()
             })
             
             return Disposables.create()

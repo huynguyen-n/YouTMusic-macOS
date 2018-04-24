@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LoginViewController" customModule="YouTMusic" customModuleProvider="target">
@@ -15,46 +14,38 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="470"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-qe-yxq">
-                    <rect key="frame" x="-2" y="-3" width="484" height="55"/>
+                    <rect key="frame" x="14" y="27" width="347" height="55"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="cmJ-2D-REH"/>
+                        <constraint firstAttribute="height" constant="50" id="Tig-VZ-2MX"/>
                     </constraints>
-                    <buttonCell key="cell" type="bevel" title="Login With Google" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UeJ-uF-y8w">
+                    <buttonCell key="cell" type="bevel" title="Continue With Google" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UeJ-uF-y8w">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VPn-Gc-EVG">
-                    <rect key="frame" x="18" y="236" width="369" height="84"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Never Sleeps" id="z0B-9X-K86">
-                        <font key="font" metaFont="systemUltraLight" size="70"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mTw-f6-5hM">
-                    <rect key="frame" x="18" y="320" width="207" height="95"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Music" id="TEN-tI-s64">
-                        <font key="font" metaFont="system" size="80"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BeX-L1-GJj">
+                    <rect key="frame" x="62" y="457" width="250" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="neJ-hN-xQg"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="YouTM_Logo" id="dCh-Yv-HGH"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="nxJ-qe-yxq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="6ol-jz-EnP"/>
-                <constraint firstItem="VPn-Gc-EVG" firstAttribute="top" secondItem="mTw-f6-5hM" secondAttribute="bottom" id="6yY-Lc-k4S"/>
-                <constraint firstItem="mTw-f6-5hM" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="Kif-dv-Sey"/>
-                <constraint firstItem="VPn-Gc-EVG" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="bcE-fG-Xsk"/>
-                <constraint firstAttribute="bottom" secondItem="nxJ-qe-yxq" secondAttribute="bottom" id="dyy-oY-ent"/>
-                <constraint firstItem="mTw-f6-5hM" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="55" id="nuI-Tz-6Bl"/>
-                <constraint firstAttribute="trailing" secondItem="nxJ-qe-yxq" secondAttribute="trailing" id="pr0-MK-zLp"/>
+                <constraint firstAttribute="bottom" secondItem="nxJ-qe-yxq" secondAttribute="bottom" constant="30" id="2Lx-v8-d2y"/>
+                <constraint firstAttribute="trailing" secondItem="nxJ-qe-yxq" secondAttribute="trailing" constant="16" id="2gG-Zx-pVx"/>
+                <constraint firstItem="BeX-L1-GJj" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="IZ6-lZ-Bah"/>
+                <constraint firstItem="BeX-L1-GJj" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="60" id="alH-Ke-fRQ"/>
+                <constraint firstItem="nxJ-qe-yxq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="16" id="hus-t1-Jya"/>
             </constraints>
-            <point key="canvasLocation" x="139.5" y="266.5"/>
+            <point key="canvasLocation" x="139.5" y="266"/>
         </customView>
     </objects>
+    <resources>
+        <image name="YouTM_Logo" width="686" height="151"/>
+    </resources>
 </document>

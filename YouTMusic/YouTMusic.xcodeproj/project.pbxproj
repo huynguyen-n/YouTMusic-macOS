@@ -11,7 +11,6 @@
 		00137CE7206A245D0067B626 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00137CE5206A245D0067B626 /* FeedViewController.xib */; };
 		00137CEA206A29720067B626 /* YouTMusicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00137CE9206A29720067B626 /* YouTMusicCollectionView.swift */; };
 		00169A7C202AC4A000EAD51A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169A7B202AC4A000EAD51A /* AppDelegate.swift */; };
-		00169A80202AC4A000EAD51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00169A7F202AC4A000EAD51A /* Assets.xcassets */; };
 		00169A83202AC4A000EAD51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00169A81202AC4A000EAD51A /* Main.storyboard */; };
 		00169AB82031803A00EAD51A /* YouTMusicCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00169AB92031803A00EAD51A /* YouTMusicCore.framework */; };
 		00169AC42031833600EAD51A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169AC22031833600EAD51A /* LoginViewController.swift */; };
@@ -19,6 +18,7 @@
 		00169AD220318DAA00EAD51A /* YouTMusicPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00169AD120318DAA00EAD51A /* YouTMusicPopover.swift */; };
 		006EA62E206A4DCB00145C5D /* NewestSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006EA62C206A4DCB00145C5D /* NewestSongCell.swift */; };
 		006EA62F206A4DCB00145C5D /* NewestSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 006EA62D206A4DCB00145C5D /* NewestSongCell.xib */; };
+		00DD173F207232DB003029FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DD173E207232DB003029FA /* Assets.xcassets */; };
 		EC122011DE5714967B0CD075 /* Pods_YouTMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E929239DA63A97C841CE8DC5 /* Pods_YouTMusic.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,6 @@
 		00137CE9206A29720067B626 /* YouTMusicCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicCollectionView.swift; sourceTree = "<group>"; };
 		00169A78202AC4A000EAD51A /* YouTMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00169A7B202AC4A000EAD51A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00169A7F202AC4A000EAD51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00169A82202AC4A000EAD51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00169A84202AC4A000EAD51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00169A85202AC4A000EAD51A /* YouTMusic.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouTMusic.entitlements; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		00169AD120318DAA00EAD51A /* YouTMusicPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTMusicPopover.swift; sourceTree = "<group>"; };
 		006EA62C206A4DCB00145C5D /* NewestSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestSongCell.swift; sourceTree = "<group>"; };
 		006EA62D206A4DCB00145C5D /* NewestSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewestSongCell.xib; sourceTree = "<group>"; };
+		00DD173E207232DB003029FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B97230F359684CA2205C09E /* Pods-YouTMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		E6234972DE8F5FD503721975 /* Pods-YouTMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTMusic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-YouTMusic/Pods-YouTMusic.release.xcconfig"; sourceTree = "<group>"; };
 		E929239DA63A97C841CE8DC5 /* Pods_YouTMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +97,7 @@
 		00169ABA2031804C00EAD51A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				00169A7F202AC4A000EAD51A /* Assets.xcassets */,
+				00DD173E207232DB003029FA /* Assets.xcassets */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -254,11 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00169A80202AC4A000EAD51A /* Assets.xcassets in Resources */,
 				00169A83202AC4A000EAD51A /* Main.storyboard in Resources */,
 				006EA62F206A4DCB00145C5D /* NewestSongCell.xib in Resources */,
 				00137CE7206A245D0067B626 /* FeedViewController.xib in Resources */,
 				00169AC52031833600EAD51A /* LoginViewController.xib in Resources */,
+				00DD173F207232DB003029FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
